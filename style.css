@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  /* border: 1px solid rosybrown; */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+}
+
+.container {
+  display: grid;
+  grid-template: 1fr 4.5fr/ 1.1fr 4fr;
+  height: 100vh;
+}
+
+.sidebar {
+  grid-row: span 2;
+  background-color: rgba(8, 63, 90, 0.514);
+}
+
+.sidebar-header {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  margin: 2rem 0 2.5rem 1.5rem;
+  font-size: 2rem;
+}
+
+.sidebar-header a,
+.sidebar-title a {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.sidebar-header a {
+  margin-left: 1.5rem;
+  font-weight: 900;
+}
+
+.sidebar-title a:hover {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.sidebar-header a:hover {
+  font-weight: 400;
+}
+
+.sidebar-header img:hover,
+.sidebar-title img:hover {
+  transform: rotate(15deg);
+}
+
+.sidebar-top {
+  margin-bottom: 5rem;
+}
+
+.sidebar-title {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem 2rem;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  font-weight: 900;
+}
+
+/* Header */
+
+.header {
+  border-bottom: 1px solid rgb(150, 146, 146);
+  box-shadow: 0px 2px 5px rgb(150, 146, 146);
+}
+
+.header-container {
+  margin: 1rem 3rem 1rem;
+}
+
+.header .top,
+.header .bottom {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.header .top-right,
+.header .bottom-right {
+  display: grid;
+  grid-auto-flow: column;
+  justify-self: end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header .bottom-right {
+  align-self: end;
+}
+
+.header .top img[src='user-image.png'] {
+  width: 40px;
+  margin-top: -5px;
+}
+
+.header .bottom img {
+  width: 50px;
+}
+
+.header .top-left,
+.header .bottom-left {
+  display: grid;
+  grid-auto-flow: column;
+  justify-self: start;
+  align-items: center;
+}
+
+.header .top-left img {
+  margin: 0 1rem;
+}
+
+.header .bottom-left > div {
+  align-self: end;
+}
+
+.search-bar input {
+  width: 40vw;
+
+  border-radius: 25px;
+  border: none;
+  background-color: rgba(207, 206, 206, 0.459);
+  padding: 0.4rem 1rem;
+}
+
+.header .bottom-left img {
+  width: 80px;
+}
+
+.header button {
+  background-color: rgba(23, 108, 206, 0.747);
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 1.5rem;
+  border: none;
+  cursor: pointer;
+
+  width: 5.5rem;
+}
+
+.header button:hover {
+  opacity: 0.9;
+}
+
+.header p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
+.header .top p {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.header .bottom p {
+  margin: 0 1rem;
+}
+
+.header .bottom p:last-child {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Main content */
+
+.main-content {
+  background-color: rgba(216, 216, 216, 0.527);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.projects {
+  grid-row: span 2;
+}
+
+.projects h1,
+.announcements h1,
+.trending h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+.cards {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+  gap: 2rem;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 1fr 40px;
+  background-color: #fff;
+  padding: 1.3rem;
+  border-radius: 5px;
+  border-left: 8px solid rgb(236, 177, 13);
+}
+
+.card .button {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: end;
+  align-items: end;
+}
+
+.announcements-content,
+.trending-content {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
